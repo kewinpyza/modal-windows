@@ -1,0 +1,163 @@
+:root {
+  --info: rgb(47, 103, 199);
+  --warning: rgb(205, 142, 34);
+  --success: rgb(19, 171, 77);
+  --danger: rgb(201, 33, 33);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 60%;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+body {
+  /* position: relative; */
+  min-height: 200vh;
+  background-image: linear-gradient(
+    to top left,
+    rgb(69, 69, 69),
+    rgb(40, 40, 40),
+    rgb(0, 0, 0)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #1f1f1f;
+}
+
+.modal-container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-window {
+  position: relative;
+  z-index: 5;
+  min-width: 35%;
+  max-width: 700px;
+  min-height: 180px;
+  background-color: #d3d3d3;
+  padding: 2rem 3rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 3rem 5rem rgba(255, 255, 255, 0.4);
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  color: var(--info);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.modal-title.warning {
+  color: var(--warning);
+}
+
+.modal-title.danger {
+  color: var(--danger);
+}
+
+.modal-title.success {
+  color: var(--success);
+}
+
+.icon {
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+.modal-description {
+  font-size: 1.5rem;
+  color: #6f6f6f;
+  line-height: 2rem;
+}
+
+.modal-buttons > button {
+  padding: 1rem;
+  font-size: 1.5rem;
+  padding: 0.7rem 3rem;
+  border-radius: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border: none;
+  margin: 1.2rem 1.5rem 0 0;
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.modal-buttons > button:hover {
+  opacity: 70%;
+}
+
+.modal-accept {
+  background-color: var(--success);
+}
+
+.modal-reject {
+  background-color: var(--danger);
+}
+
+.closer {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 3.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.closer:hover {
+  color: #a1a1a1;
+}
+
+.btn-show {
+  font-size: 2.2rem;
+  padding: 1.6rem 3.2rem;
+  font-weight: 700;
+  border: none;
+  background-color: #ffffff;
+  color: #1f1f1f;
+  cursor: pointer;
+  border-radius: 8rem;
+  margin: 4rem 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 200vh;
+  background-color: rgba(143, 143, 143, 0.6);
+  backdrop-filter: blur(3px);
+}
