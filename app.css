@@ -1,6 +1,6 @@
 :root {
   --info: rgb(47, 103, 199);
-  --warning: rgb(205, 142, 34);
+  --warning: rgb(204, 116, 23);
   --success: rgb(19, 171, 77);
   --danger: rgb(201, 33, 33);
 }
@@ -157,7 +157,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 200vh;
+  min-height: 100%;
   background-color: rgba(143, 143, 143, 0.6);
   backdrop-filter: blur(3px);
 }
